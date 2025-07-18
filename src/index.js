@@ -21,14 +21,14 @@ app.use(
     credentials: true,
   })
 );
-let PORT = process.env.PORT || 3000;
-// let PORT = 4000;
+const PORT = process.env.PORT || 3000;
 app.use("/api", router);
 
 app.get("/", (req, res) => {
   res.json("server is working");
 });
 
-app.listen(PORT, "localhost", () => {
-  console.log(`Server is listening on http://localhost:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
 });
+
